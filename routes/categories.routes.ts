@@ -18,3 +18,5 @@ categoriesRoutes.post('/', (request, response) => {
 
   return response.status(201).send();
 });
+
+export { categoriesRoutes };
