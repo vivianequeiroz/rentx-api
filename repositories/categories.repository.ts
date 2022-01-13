@@ -1,7 +1,7 @@
 import { Category } from '../model/Category';
 
 //DTO => Data Transfer Object, responsible to transited with data across the layers of the app
-// The routes does not nedd to be aware of the models classes types
+// The routes do not need to be aware of the models classes types
 
 interface ICreateCategoryDTO {
   name: string;
@@ -20,6 +20,10 @@ class CategoriesRepository {
     Object.assign(category, { name, description, created_at: new Date() });
 
     this.categories.push(category);
+  }
+
+  listCategories(): Category[] {
+    return this.categories;
   }
 }
 
