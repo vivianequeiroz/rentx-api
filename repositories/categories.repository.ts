@@ -1,12 +1,5 @@
 import { Category } from '../model/Category';
-
-//DTO => Data Transfer Object, responsible to transited with data across the layers of the app
-// The routes do not need to be aware of the models classes types
-
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
+import { ICreateCategoryDTO } from '../services/ICategoriesRepository';
 
 class CategoriesRepository {
   private categories: Category[] = [];
@@ -26,7 +19,7 @@ class CategoriesRepository {
     return this.categories;
   }
 
-  findCategoryByName(name: string) {
+  findCategoryByName(name: string): Category {
     const category = this.categories.find((category) => category.name === name);
 
     return category;
