@@ -19,7 +19,12 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'prettier', 'eslint-plugin-import-helpers'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'eslint-plugin-import-helpers',
+    'import',
+  ],
   ignorePatterns: ['node_modules', '/*.js', 'dist'],
   rules: {
     camelcase: 'off',
@@ -54,7 +59,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      typescript: { },
+      typescript: {},
     },
   },
 };
