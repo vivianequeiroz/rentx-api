@@ -1,10 +1,10 @@
 import { v4 as uuidV4 } from 'uuid';
 
 class Category {
-  name: string;
-  description: string;
+  name!: string;
+  description!: string;
   id?: string;
-  created_at: Date;
+  created_at!: Date;
 
   constructor() {
     if (!this.id) {
