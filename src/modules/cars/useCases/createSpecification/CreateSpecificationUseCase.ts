@@ -4,6 +4,7 @@ interface IRequest {
   name: string;
   description: string;
 }
+
 class CreateSpecificationUseCase {
   constructor(private specificationRepository: ISpecificationRepository) {}
 
