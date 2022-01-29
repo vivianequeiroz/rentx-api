@@ -42,7 +42,6 @@ class ImportCategoryUseCase {
         this.categoriesRepository.createCategory({ name, description });
       }
     });
-    console.log(categories);
   }
 }
 
