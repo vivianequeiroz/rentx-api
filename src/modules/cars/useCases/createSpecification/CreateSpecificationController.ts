@@ -4,13 +4,13 @@ import { CreateSpecificationUseCase } from './CreateSpecificationUseCase';
 
 @injectable()
 class CreateSpecificationController {
-  handleRequest(request: Request, response: Response): Response {
+  async handleRequest(request: Request, response: Response): Promise<Response> {
     const { name, description } = request.body;
     const createSpecificationUseCase = container.resolve(
       CreateSpecificationUseCase,
     );
 
-    createSpecificationUseCase.execute({ name, description });
+    await createSpecificationUseCase.execute({ name, description });
 
     return response.status(201).send();
   }
